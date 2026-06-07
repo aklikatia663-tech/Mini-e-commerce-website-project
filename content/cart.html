@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your shopping cart at Drinks House">
+    <title>Cart - Drinks House</title>
+
+    <!-- Styles du site -->
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/cart.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+
+    <!-- Police du site -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation du site -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+
+                <!-- Logo -->
+                <a href="../index.html" class="logo">
+                    <img src="../images/logo.png" alt="Drinks House Logo">
+                    <span>Drinks House</span>
+                </a>
+
+                <!-- Bouton menu mobile -->
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Liens de navigation -->
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Actions utilisateur -->
+                <div class="nav-actions">
+
+                    <!-- Icône panier -->
+                    <a href="cart.html" class="cart-icon active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="m1 1 4 4 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </a>
+
+                    <!-- Connexion / inscription -->
+                    <div class="auth-buttons" id="authButtons">
+                        <a href="login.html" class="btn btn-outline">Login</a>
+                        <a href="register.html" class="btn btn-primary">Sign Up</a>
+                    </div>
+
+                    <!-- Menu utilisateur connecté -->
+                    <div class="user-menu" id="userMenu" style="display: none;">
+                        <span class="user-name" id="userName"></span>
+                        <button class="btn btn-outline" id="logoutBtn">Logout</button>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Titre de la page -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Shopping Cart</h1>
+                <p>Review your items before checkout</p>
+            </div>
+        </section>
+
+        <!-- Section du panier -->
+        <section class="cart-section">
+            <div class="container">
+                <div class="cart-layout">
+
+                    <!-- Liste des produits dans le panier -->
+                    <div class="cart-items" id="cartItems">
+                        <!-- Produits chargés dynamiquement avec JavaScript -->
+                    </div>
+
+                    <!-- Message panier vide -->
+                    <div class="empty-cart" id="emptyCart" style="display: none;">
+                        <div class="empty-cart-icon">🛒</div>
+                        <h2>Your cart is empty</h2>
+                        <p>Looks like you haven't added any drinks yet.</p>
+                        <a href="products.html" class="btn btn-primary">Browse Products</a>
+                    </div>
+
+                    <!-- Résumé du panier -->
+                    <aside class="cart-summary" id="cartSummary">
+                        <h3>Order Summary</h3>
+
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">0 DZD</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Delivery Fee</span>
+                            <span id="deliveryFee">200 DZD</span>
+                        </div>
+
+                        <div class="summary-row discount" id="discountRow" style="display: none;">
+                            <span>Discount</span>
+                            <span id="discount">0 DZD</span>
+                        </div>
+
+                        <!-- Code promo -->
+                        <div class="promo-code">
+                            <input type="text" id="promoInput" placeholder="Promo code">
+                            <button class="btn btn-outline" id="applyPromo">Apply</button>
+                        </div>
+
+                        <!-- Total -->
+                        <div class="summary-total">
+                            <span>Total</span>
+                            <span id="total">0 DZD</span>
+                        </div>
+
+                        <!-- Bouton paiement -->
+                        <button class="btn btn-primary btn-full" id="checkoutBtn">Proceed to Checkout</button>
+
+                        <!-- Continuer les achats -->
+                        <a href="products.html" class="continue-shopping">Continue Shopping</a>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Fenêtre de commande -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+
+            <!-- Fermer la fenêtre -->
+            <button class="modal-close" id="closeModal">&times;</button>
+
+            <h2>Complete Your Order</h2>
+
+            <!-- Formulaire de commande -->
+            <form id="checkoutForm" class="checkout-form">
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="orderPhone">Phone Number</label>
+                    <input type="tel" id="orderPhone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="wilaya">Wilaya</label>
+                    <select id="wilaya" name="wilaya" required>
+                        <option value="">Select your wilaya</option>
+                        <option value="Tizi Ouzou">Tizi Ouzou</option>
+                        <option value="Alger">Alger</option>
+                        <option value="Oran">Oran</option>
+                        <option value="Constantine">Constantine</option>
+                        <option value="Annaba">Annaba</option>
+                        <option value="Blida">Blida</option>
+                        <option value="Setif">Setif</option>
+                        <option value="Bejaia">Bejaia</option>
+                        <option value="Batna">Batna</option>
+                        <option value="Djelfa">Djelfa</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Order Notes (Optional)</label>
+                    <textarea id="notes" name="notes" rows="2"></textarea>
+                </div>
+
+                <!-- Résumé rapide dans la fenêtre -->
+                <div class="order-summary-mini">
+                    <h4>Order Total: <span id="modalTotal">0 DZD</span></h4>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Place Order</button>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Message de succès après commande -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-content">
+
+            <div class="success-icon">✓</div>
+
+            <h2>Order Placed Successfully!</h2>
+
+            <p>Thank you for your order. We will contact you shortly to confirm delivery.</p>
+
+            <p class="order-number">Order #<span id="orderNumber"></span></p>
+
+            <a href="products.html" class="btn btn-primary">Continue Shopping</a>
+
+        </div>
+    </div>
+
+    <!-- Footer du site -->
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <h3>Drinks House</h3>
+                <p>Your destination for natural and refreshing beverages.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 Tizi Ouzou, Algeria</p>
+                <p>📞 +213 555 123 456</p>
+                <p>✉️ contact@drinkshouse.dz</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Drinks House. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts JS -->
+    <script src="../javascript/products.js"></script>
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/cart.js"></script>
+
+</body>
+</html>

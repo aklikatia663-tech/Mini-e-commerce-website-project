@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Drinks House and our mission">
+    <title>About Us - Drinks House</title>
+
+    <!-- Feuilles de style principales -->
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/about.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+
+    <!-- Police Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--  HEADER / NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+
+                <!-- Logo du site -->
+                <a href="../index.html" class="logo">
+                    <img src="../images/logo.png" alt="Drinks House Logo">
+                    <span>Drinks House</span>
+                </a>
+
+                <!-- Bouton menu mobile -->
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Liens de navigation -->
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Actions utilisateur (panier + auth) -->
+                <div class="nav-actions">
+
+                    <!-- Icône panier -->
+                    <a href="cart.html" class="cart-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="m1 1 4 4 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </a>
+
+                    <!-- Boutons connexion / inscription -->
+                    <div class="auth-buttons" id="authButtons">
+                        <a href="login.html" class="btn btn-outline">Login</a>
+                        <a href="register.html" class="btn btn-primary">Sign Up</a>
+                    </div>
+
+                    <!-- Menu utilisateur (affiché si connecté) -->
+                    <div class="user-menu" id="userMenu" style="display: none;">
+                        <span class="user-name" id="userName"></span>
+                        <button class="btn btn-outline" id="logoutBtn">Logout</button>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!--SECTION TITRE PAGE  -->
+        <section class="page-header">
+            <div class="container">
+                <h1>About Us</h1>
+                <p>Discover the story behind Drinks House</p>
+            </div>
+        </section>
+
+        <!-- SECTION HISTOIRE -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+
+                    <!-- Texte de présentation -->
+                    <div class="about-text">
+                        <h2>Our Story</h2>
+                        <p>Founded in Tizi Ouzou, Algeria, <strong>Drinks House</strong> began with a simple mission: to provide fresh, natural, and delicious beverages to our community.</p>
+                        <p>We believe that what you drink matters. That's why we source only the finest ingredients - fresh fruits, premium tea leaves, and carefully selected coffee beans - to create drinks that not only taste amazing but also nourish your body.</p>
+                        <p>From our refreshing fruit juices and creamy smoothies to our aromatic teas and expertly crafted coffees, every drink is prepared with care and passion.</p>
+                    </div>
+
+                    <!-- Image illustrative -->
+                    <div class="about-image">
+                        <img src="../images/hero-drinks.png" alt="Our drinks collection">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--  SECTION MISSION  -->
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-grid">
+
+                    <!-- Mission -->
+                    <div class="mission-card">
+                        <div class="mission-icon">🎯</div>
+                        <h3>Our Mission</h3>
+                        <p>To provide high-quality, natural beverages that refresh, energize, and bring joy to every customer while promoting a healthy lifestyle.</p>
+                    </div>
+
+                    <!-- Vision -->
+                    <div class="mission-card">
+                        <div class="mission-icon">👁️</div>
+                        <h3>Our Vision</h3>
+                        <p>To become Algeria's leading natural beverage brand, known for quality, innovation, and commitment to customer satisfaction.</p>
+                    </div>
+
+                    <!-- Valeurs -->
+                    <div class="mission-card">
+                        <div class="mission-icon">💚</div>
+                        <h3>Our Values</h3>
+                        <p>Quality, sustainability, customer focus, and a passion for creating the best natural drinks using locally sourced ingredients.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- STATISTIQUES  -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-number">12+</div>
+                        <div class="stat-label">Products</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-number">48</div>
+                        <div class="stat-label">Wilayas Covered</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Natural Ingredients</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--  ENGAGEMENTS  -->
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">Our Commitment</h2>
+
+                <div class="commitment-grid">
+
+                    <div class="commitment-card">
+                        <div class="commitment-icon">🌿</div>
+                        <h3>100% Natural</h3>
+                        <p>No artificial colors, flavors, or preservatives. Just pure, natural goodness in every sip.</p>
+                    </div>
+
+                    <div class="commitment-card">
+                        <div class="commitment-icon">🍃</div>
+                        <h3>Fresh Daily</h3>
+                        <p>We prepare our drinks fresh every day to ensure maximum flavor and nutritional value.</p>
+                    </div>
+
+                    <div class="commitment-card">
+                        <div class="commitment-icon">🤝</div>
+                        <h3>Local Support</h3>
+                        <p>We work with local farmers and suppliers to source the best Algerian produce.</p>
+                    </div>
+
+                    <div class="commitment-card">
+                        <div class="commitment-icon">♻️</div>
+                        <h3>Eco-Friendly</h3>
+                        <p>We use recyclable packaging and sustainable practices to protect our environment.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--  CALL TO ACTION -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Try Our Drinks?</h2>
+                <p>Experience the natural refreshment that Drinks House offers.</p>
+                <a href="products.html" class="btn btn-primary btn-lg">Browse Products</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER  -->
+    <footer>
+        <div class="footer-container">
+
+            <!-- Présentation -->
+            <div class="footer-section">
+                <h3>Drinks House</h3>
+                <p>Your destination for natural and refreshing beverages.</p>
+            </div>
+
+            <!-- Liens rapides -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 Tizi Ouzou, Algeria</p>
+                <p>📞 +213 555 123 456</p>
+                <p>✉️ contact@drinkshouse.dz</p>
+            </div>
+
+        </div>
+
+        <!-- Bas de page -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Drinks House. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="../javascript/products.js"></script>
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/cart.js"></script>
+
+</body>
+</html>

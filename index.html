@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Drinks House - Your destination for natural juices, smoothies, tea and coffee">
+    <title>Drinks House - Natural & Modern Beverages</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header-transparent">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Drinks House Logo">
+                    <span>Drinks House</span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="content/products.html">Products</a></li>
+                    <li><a href="content/cart.html">Order</a></li>
+                    <li><a href="content/login.html" class="auth-link" id="loginLink">Login</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="auth-buttons" id="authButtons">
+                        <a href="content/register.html" class="btn btn-primary">Register</a>
+                    </div>
+                    <div class="user-menu" id="userMenu" style="display: none;">
+                        <span class="user-name" id="userName"></span>
+                        <button class="btn btn-outline btn-white" id="logoutBtn">Logout</button>
+                    </div>
+                    <a href="content/cart.html" class="cart-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="m1 1 4 4 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero" style="background-image: url('images/hero-bg.png');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Fresh & Natural Drinks</h1>
+                <p class="hero-subtitle">Discover our selection of premium juices, smoothies, tea and coffee made with the finest natural ingredients</p>
+                <a href="content/products.html" class="btn btn-primary btn-lg">Explore Our Menu</a>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <div class="container">
+                <div class="category-grid">
+                    <a href="content/products.html?category=juice" class="category-card category-juice">
+                        <div class="category-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+                                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+                                <line x1="6" x2="6" y1="2" y2="4"/>
+                                <line x1="10" x2="10" y1="2" y2="4"/>
+                                <line x1="14" x2="14" y1="2" y2="4"/>
+                            </svg>
+                        </div>
+                        <h3>Fresh Juices</h3>
+                        <p>Pure & refreshing natural juices</p>
+                    </a>
+                    <a href="content/products.html?category=smoothie" class="category-card category-smoothie">
+                        <div class="category-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5.5 21h13"/>
+                                <path d="M6 12h12"/>
+                                <path d="M6.5 12L5 21"/>
+                                <path d="M17.5 12L19 21"/>
+                                <path d="M5 12L6 5h12l1 7"/>
+                                <path d="M6 5V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2"/>
+                            </svg>
+                        </div>
+                        <h3>Smoothies</h3>
+                        <p>Creamy & nutritious blends</p>
+                    </a>
+                    <a href="content/products.html?category=tea" class="category-card category-tea">
+                        <div class="category-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+                                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+                            </svg>
+                        </div>
+                        <h3>Premium Tea</h3>
+                        <p>Calm & aromatic infusions</p>
+                    </a>
+                    <a href="content/products.html?category=coffee" class="category-card category-coffee">
+                        <div class="category-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+                                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+                                <line x1="6" x2="6" y1="2" y2="4"/>
+                                <line x1="10" x2="10" y1="2" y2="4"/>
+                                <line x1="14" x2="14" y1="2" y2="4"/>
+                            </svg>
+                        </div>
+                        <h3>Artisan Coffee</h3>
+                        <p>Bold & energizing brews</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Produits en vedette -->
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Our Best Sellers</h2>
+                <p class="section-subtitle">Discover our most popular natural beverages</p>
+                <div class="products-grid" id="featuredProducts">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+                <div class="view-all">
+                    <a href="content/products.html" class="btn btn-primary">View All Products</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- pourquoi nous choisir  -->
+        <section class="why-us">
+            <div class="container">
+                <h2 class="section-title">Why Choose Drinks House?</h2>
+                <p class="section-subtitle">We are committed to quality and your satisfaction</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
+                                <path d="M8.5 8.5v.01"/>
+                                <path d="M16 15.5v.01"/>
+                                <path d="M12 12v.01"/>
+                                <path d="M11 17v.01"/>
+                                <path d="M7 14v.01"/>
+                            </svg>
+                        </div>
+                        <h3>100% Natural</h3>
+                        <p>All our drinks are made with fresh, natural ingredients without artificial additives.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <h3>Fast Delivery</h3>
+                        <p>Quick and reliable delivery service across all wilayas in Algeria.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3>Quality Guaranteed</h3>
+                        <p>We ensure the highest quality standards in every drink we prepare.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h3>Best Prices</h3>
+                        <p>Affordable prices in Algerian Dinar with great value for money.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Stay Updated!</h2>
+                <p>Subscribe to our newsletter for exclusive offers and new product announcements.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-white">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Drinks House Logo">
+                    <h3>Drinks House</h3>
+                </div>
+                <p>Your destination for natural and refreshing beverages. Quality drinks made with love.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="content/products.html">Products</a></li>
+                    <li><a href="content/about.html">About Us</a></li>
+                    <li><a href="content/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="content/products.html?category=juice">Fresh Juices</a></li>
+                    <li><a href="content/products.html?category=smoothie">Smoothies</a></li>
+                    <li><a href="content/products.html?category=tea">Tea</a></li>
+                    <li><a href="content/products.html?category=coffee">Coffee</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Tizi Ouzou, Algeria</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>+213 555 123 456</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <span>contact@drinkshouse.dz</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2025 Drinks House. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="javascript/products.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/cart.js"></script>
+</body>
+</html>
