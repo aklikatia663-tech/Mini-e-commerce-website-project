@@ -1,4 +1,4 @@
-# Mini-e-commerce-website-project
+ Mini-e-commerce-website-project
 
 Drinks House est un mini site e-commerce de boissons naturelles.
 L'idée c'est simple : les utilisateurs peuvent parcourir une sélection
